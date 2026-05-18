@@ -1,0 +1,168 @@
+/* ===== CSS Variables ===== */
+:root {
+  --bg-primary: #ebe4d6;
+  --bg-secondary: rgba(255, 252, 240, 0.72);
+  --bg-card: rgba(112, 96, 76, 0.1);
+  --accent: #1f766c;
+  --accent-blue: #2f6f8f;
+  --accent-orange: #9a642e;
+  --accent-purple: #6f5f9d;
+  --accent-pink: #9a4d5f;
+  --text-primary: #16130f;
+  --text-secondary: #3f3932;
+  --text-muted: #746a5e;
+  --border: rgba(22, 19, 15, 0.2);
+  --font-sans: Georgia, 'Noto Serif TC', 'Microsoft JhengHei', serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  --transition: all 0.3s ease;
+  --shadow: 0 10px 30px rgba(2, 12, 27, 0.7);
+  --radius: 8px;
+  --hero-name: #17120e;
+  --hero-name-en: #51483e;
+  --hero-intro: #3f3932;
+  --nav-bg: rgba(235, 228, 214, 0.9);
+  --nav-shadow: rgba(42, 36, 30, 0.12);
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at 36% 24%, rgba(255, 252, 240, 0.96), transparent 34%),
+    radial-gradient(circle at 78% 68%, rgba(112, 96, 76, 0.13), transparent 38%),
+    repeating-linear-gradient(0deg, rgba(30, 26, 22, 0.025) 0 1px, transparent 1px 6px),
+    #ebe4d6;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  position: relative;
+  isolation: isolate;
+}
+
+main,
+.footer {
+  position: relative;
+  z-index: 2;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--text-primary);
+}
+
+ul { list-style: none; }
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: rgba(42, 36, 30, 0.32); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ===== Utility ===== */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 40px;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+  margin-top: 12px;
+}
+
+/* ===== Fade-in animation ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Tag ===== */
+.tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  background: rgba(100, 255, 218, 0.08);
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  border-radius: 4px;
+  padding: 3px 8px;
+  margin: 3px 3px 3px 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .container { padding: 0 24px; }
+  section { padding: 60px 0; }
+}
+
+#app.theme-dark {
+  --bg-primary: #10243d;
+  --bg-secondary: #173456;
+  --bg-card: #213f67;
+  --accent: #64ffda;
+  --text-primary: #ccd6f6;
+  --text-secondary: #8892b0;
+  --text-muted: #62708a;
+  --border: #233554;
+  --hero-name: #e6f1ff;
+  --hero-name-en: #a8b2d1;
+  --hero-intro: #b8c3df;
+  --nav-bg: rgba(16, 36, 61, 0.92);
+  --nav-shadow: rgba(2, 12, 27, 0.55);
+  background:
+    radial-gradient(circle at 68% 22%, rgba(100, 255, 218, 0.11), transparent 28%),
+    radial-gradient(circle at 16% 12%, rgba(87, 203, 255, 0.08), transparent 30%),
+    linear-gradient(180deg, #132943 0%, #10243d 52%, #0e2037 100%);
+}
