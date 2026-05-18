@@ -87,14 +87,15 @@ export const experiences = [
     period: '2024.05 — 至今',
     current: true,
     description:
-      '派駐玉山銀行，負責海外分行 Python RPA 與金融流程自動化開發，維護 22 項自動化系統，涵蓋美國、新加坡、越南、緬甸、柬埔寨等分行作業。',
+      '派駐玉山銀行期間，擔任 Python RPA／金融流程自動化開發角色，負責海外分行 Python RPA 與金融系統自動化專案，支援美國、新加坡、越南、緬甸、柬埔寨等海外分行作業。',
     highlights: [
-      '開發門檻交易申報、Fedwire ISO 20022 訊息產製、銀行文件 OCR 分類、信用卡付款整合等流程',
-      '整合 T24 Core Banking、NCS、OCR／LLM API，降低跨系統人工操作風險',
-      '透過自動化將每日 4–8 小時人工流程縮短逾 90%',
-      '部署於 AWS（ECR / ECS / S3 / EventBridge / CloudWatch）production 環境',
+      '參與開發與維護 22 項 Python RPA／流程自動化系統，涵蓋門檻交易申報、Fedwire ISO 20022 訊息處理、銀行文件 OCR 分類、信用卡付款資料整合、政府文件 OCR／翻譯與 T24 查詢等流程',
+      '整合 T24 Core Banking、NCS 信用卡系統、Outlook／shared mailbox、Windows GUI 應用程式、Excel／PDF 文件與 OCR／LLM API，降低跨系統人工操作、資料轉錄與文件分類風險',
+      '處理 Fedwire ISO 20022 pacs.008／pacs.009 訊息產製與 T24 OFS 資料整合，建立 CSV 稽核紀錄、錯誤隔離與批次處理流程，提升金融訊息處理的一致性與可追蹤性',
+      '建立 OCR／LLM 輔助文件處理流程，支援高棉文 Deika 文件辨識、LLM 翻譯、Excel 報表產製與截圖稽核留存，強化海外分行文件處理與法遵作業效率',
+      '導入多項海外分行自動化流程，代表案例包含每日約 4 小時門檻交易申報流程自動化、每日約 8 小時文件分類流程自動化，以及每日約 2 小時信用卡付款資料整合流程縮短約 90%',
     ],
-    tags: ['Python', 'AWS', 'Docker', 'OCR', 'LLM API', 'RPA', 'T24'],
+    tags: ['Python', 'RPA', 'T24', 'Fedwire ISO 20022', 'OCR', 'Selenium'],
   },
   {
     company: 'Google（板橋）',
