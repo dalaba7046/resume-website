@@ -6,22 +6,22 @@
       <div class="about-grid fade-in" ref="aboutRef">
         <div class="about-text">
           <p>
-            後端工程師，具備 <strong>5 年以上 Python 開發經驗</strong>，
-            擅長後端服務建置、雲端部署與多系統 API 整合。
-            曾派駐玉山銀行開發 22 項 RPA 自動化系統，
-            也在宏碁主導廣告、物流、Google 等多項第三方 API 串接專案。
+            具備 <strong>5 年以上 Python 後端與系統整合經驗</strong>。
+            近兩年在緯創軟體派駐玉山銀行，參與海外分行 RPA 與金融流程自動化，
+            將 6 個銀行系統的共通基礎設施整理成可重用的 Python 自動化框架。
           </p>
           <p>
-            目前透過個人 GitHub 專案延伸 <strong>FastAPI + SQLAlchemy</strong>、
-            <strong>Django</strong> 等後端實作能力，
-            並積極學習 <strong>Vue.js</strong>，
-            以本站作為全端開發的起點。
+            更早在宏碁負責跨區域電商資料管線與商業 API 整合，
+            涵蓋 30+ 資料源、8 家廣告與物流 API，以及 GCP BigQuery / GCS 寫入管線。
+            期間獨立主導 <strong>AWS 容器化 POC</strong>，
+            後續成為其他爬蟲上雲的基礎方案。
           </p>
           <p>
-            學歷：<strong>東吳大學 資料科學系 碩士</strong>（在職專班）
+            個人專案以 <strong>FastAPI + Vue 3 + Docker</strong> 為主，
+            目前朝需要多源資料整合、雲端管線與後端 API 開發的全端 / 後端職務前進。
           </p>
           <p>
-            證照：銀行內部控制與內部稽核測驗（一般金融）合格
+            學歷：<strong>東吳大學 資料科學系 在職專班碩士</strong>（已畢業）
           </p>
         </div>
         <div class="about-stats">
@@ -43,8 +43,8 @@ const aboutRef = ref(null)
 const stats = [
   { num: '5+', label: 'Years Python' },
   { num: '22', label: '自動化系統' },
-  { num: '10+', label: 'API 整合' },
-  { num: '4', label: '雲端 AWS 服務' },
+  { num: '6', label: '銀行系統' },
+  { num: '8', label: '商業 API' },
 ]
 
 onMounted(() => {
